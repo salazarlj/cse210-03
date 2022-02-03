@@ -1,14 +1,13 @@
-from Classes.game_seeker import Seeker_game
+from Classes.random_words import Word_list
+class Game_Master:
+    """This class is responsible for organizing the game Jumper
+    attributes:
+    
+    methods:
 
-game1 = Seeker_game()
+    """
+    def __init__(self):
+        pass
 
-game1.find_a_number()
-#print (game1.number_to_find)
-#print (game1.number_player)
-
-valor = game1.number
-val = game1.number_player
-
-while game1.number_player !=0:
-    game1.guess_number(val, valor)
-    game1.find_a_number()
+    def star_game(self):
+        pass
