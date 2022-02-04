@@ -1,3 +1,8 @@
-class Word_list:
+
+
+
+class Display:
+    
     def __init__(self) -> None:
+        
         pass

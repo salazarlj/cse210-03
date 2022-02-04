@@ -1,4 +1,4 @@
-from Classes.jumper import Game_Master
+from Classes.Game_Master import Game_Master
 
 game1 = Game_Master()
 
