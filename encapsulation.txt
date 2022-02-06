@@ -1,0 +1,16 @@
+How did you apply encapsulation to your program's design?
+
+We applied encapsulation by taking into account the principles of designing 
+a private code that can be re-usable and accessible. 
+By the way, we are in the middle of the structure process. We are still 
+creating the attributes and methods that we need for the final project, but 
+we finished the design and attached it here as a png document.
+
+As you see in the image, we have four principal classes and their methods. 
+First, we have the "Director" which in this case it is called the Game_Master class.
+This "Director" class enables and organize the rest of the methods that are: 
+
+Guess.py: This class is in charge of the player´s guessing letter part
+Puzzle.py: This class is responsible for creating a random list of words
+Display.py: This class is in charge of displaying the lines and organizing the 
+parachute structure

@@ -2,6 +2,14 @@
 import random
 
 class Puzzle:
+
+    """ This class is responsible for creating a random list of words
+
+    attributes:
+
+    methods:
+    
+    """
     
     def __init__(self) -> None:
         #needs lots of words in the list
