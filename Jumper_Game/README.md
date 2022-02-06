@@ -21,8 +21,9 @@ The project files and folders are organized as follows:
 root                    (project root folder)
 +-- Jumper_Game         (source code for game)
   +-- Classes              (specific classes)
-  +--- jumper.py             (program entry point)
-  +--- random_words.py       (program entry point)
+  +--- Game_Master.py             (program entry point)
+  +--- Guess.py       (program entry point)
+  +--- Puzzle.py       (program entry point)
   +-- __main__.py       (program entry point)
 +-- README.md           (general info)
 ```

@@ -4,10 +4,9 @@ from Display import Display
 
 
 
-
-
 class Game_Master:
-    """This class is responsible for organizing the game Jumper
+
+    """ This class is responsible for organizing the game Jumper
     attributes:
     
     methods:

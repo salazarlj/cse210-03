@@ -1,9 +1,13 @@
-
-
-
 class Display:
     
-    def __init__(self):
+   """ This class is in charge of displaying the lines and
+     organizing the parachute structure
+     
+    attributes:
+    
+    methods:"""
+    
+     def __init__(self):
         self.space = " "
        
     def draw_person(self):
