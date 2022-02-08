@@ -1,5 +1,5 @@
-from io import StringIO
 from Puzzle import Puzzle
+from Game_Master import Game_Master
 
 
 class Guess:
@@ -13,39 +13,37 @@ class Guess:
     """
 
     def __init__(self):
+
+        #choose a random word
         secret_word = Puzzle.get_random_word(Puzzle())
-        self.letters_word = self.Puzzle.letters_word
-        self.letters_hidden = []
+
+        #call the letter input by the user
+        inputs = Game_Master.do_inputs
+
+        #create a list with the letters from the secret word
+        secrets_letters = []
+        for i in range(len(self.secret_word)):
+            self.secrets_letters.append(secret_word[i])
+        
+        return secrets_letters
 
     def guess_letter(self):
-        ask = input('Guess a letter [a-z]: ')
-        ask = ask.strip().lower
+        #call the list with the secrets letters
+        guessed = self.secrets_letters
 
-        valid_word = self.Puzzle.check_letters(ask)
-        if valid_word:
-            self.do_inputs = ask[0]
+        #compare the letter inputed with the letters in the list
+        if self.inputs in  self.guessed:
+            for i in range(len(self.guessed)):
+                if self.inputs == self.guesssed[i]:
+                    return guessed #return the letter if this is in the list
+                else:
+                    return False  
+
+    def reveal_word(self):
+        #call the letter if this exist in the list or draw a dashes if there isn't
+        reveal_letter = self.guess_letter()
+        if reveal_letter:
+            print(reveal_letter)
         else:
-            print("That's not a valid character...")
-        pass
-    def list_dashes(self):
-        for i in range(len(self.letters_word)):
-            self.letters_hidden.append('_')
-
-    def check_letters(self, character) -> bool:
-        stringg = StringIO.ascii_lowercase
-        listt = list(stringg)
-        if character in listt:
-            return True
-        else:
-            return False
-    def check_guessed(self):
-        # Chek if the letter choosed by the user is in the secret word, and remplace the dashes if there is the letter. 
-         if self.do_inputs in self.letters_word:
-             for i in range (len(self.letters_word)):
-                 if self.do_inputs == self.letters_word[i]:
-                     self.letters_hidden[i] = self.do_inputs
-                     pass
-
-
-    def reveal_word():
-        pass
+            print("_")
+        
