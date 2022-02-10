@@ -12,7 +12,7 @@ class Guess:
     def __init__(self):
 
         #choose a random word
-        Guess.secret_word =Puzzle.get_random_word(Puzzle())
+        Guess.secret_word = Puzzle.get_random_word(Puzzle())
 
         #call the letter input by the user
         Guess.input = ""
@@ -25,20 +25,16 @@ class Guess:
 
         if Guess.input in Guess.secrets_letters:
             for i in range(len(Guess.secrets_letters)):
-                if Guess.input == Guess.secrets_letters[i]:
+                if Guess.input == Guess.secrets_letters:
                     return Guess.secrets_letters #return the letter if this is in the list
                 else:
                     return False  
 
     def reveal_word(self):
         #call the letter if this exist in the list or draw a dashes if there isn't
-        reveal_letter = Guess.guess_letter(Guess())
+        reveal_letter = Guess.guess_letter(Guess.secrets_letters)
         if reveal_letter == True:
             print(reveal_letter)
         else:
             print("_")
         
-# test1=Guess()
-# words=test1.guess_letter
-# print()
-# print(words)
