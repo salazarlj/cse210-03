@@ -18,6 +18,8 @@ class Game_Master:
         self.guess=Guess()
         self.puzzle=Puzzle()
         self.display=Display()
+        self.secret_word=""
+        self.input=""
         
 
 
@@ -33,7 +35,6 @@ class Game_Master:
         
         """
 
-        Guess.secret_word=Puzzle.get_random_word(Puzzle())
         letter=input("guess a letter: ")
         Guess.input=letter
         
