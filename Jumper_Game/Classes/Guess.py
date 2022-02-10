@@ -13,6 +13,7 @@ class Guess:
     
     def __init__(self):
         secret_word=Puzzle.get_random_word(Puzzle())
+        print(secret_word)
     
     def guess_letter():
         pass
@@ -20,3 +21,4 @@ class Guess:
         pass
 
 
+guess=Guess()

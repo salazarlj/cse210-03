@@ -18,6 +18,7 @@ class Game_Master:
         self.guess=Guess()
         self.puzzle=Puzzle()
         self.display=Display()
+        secret_word=""
         
         pass
 
