@@ -13,11 +13,18 @@ class Guess:
 
         #choose a random word
         Guess.secret_word =Puzzle.get_random_word(Puzzle())
-
+        self.word_letters = []
         #call the letter input by the user
-        Guess.input = ""
+        #Guess.input = "" 
 
         #create a list with the letters from the secret word
+
+        word = Guess.secret_word
+
+        for i in range(len(word)):
+            self.word_letters.append(word[i])
+
+
         Guess.secrets_letters = [x for x in Guess.secret_word]
 
     def guess_letter(self):
@@ -32,6 +39,7 @@ class Guess:
         print(Guess.secret_word)
         print("the letters are")
         print(Guess.secrets_letters)
+        print (len(Guess.secrets_letters))
         if Guess.input in Guess.secrets_letters:
             for i in range(len(Guess.secrets_letters)):
                 if Guess.input == Guess.secrets_letters[i]:
