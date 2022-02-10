@@ -18,40 +18,50 @@ class Game_Master:
         self.guess=Guess()
         self.puzzle=Puzzle()
         self.display=Display()
-        self.secret_word=""
         self.input=""
+        self.word_letters=self.puzzle.word_letters
+        self.secret_letters=[]
+        self.life=self.guess.life
+        self.word=self.puzzle.word
         
 
 
-    def star_game(self):
+    def start_game(self,):
+        self.word=self.puzzle.get_random_word()
+        self.guess.set_word_letters(self.word_letters)
+        self.display.set_life(self.life)
+        self.guess.set_secret_letters(self.secret_letters)
+
+        for i in range(len(self.puzzle.word_letters)):
+          self.secret_letters.append('_')
+       
+        
         while self.is_playing:
-            self.do_inputs()
-            self.check_letter()
-            self.do_output()
+            
+            print("  ".join(self.secret_letters))
+            print()
+            
+            self.display.draw(self.life)
+            print()
+            
+            self.input=input("guess a letter: ") 
+            if self.guess.guess_letter(self.input)== False:
+                self.life-=1
+            self.display.set_life(self.life)
             
             
-    def do_inputs(self):
-        """here is where we ask for a letter.
+            if self.word_letters==self.secret_letters:
+                print("Congrats! You Won!")
+                self.is_playing==False
+                break
+            
+            if self.life<1:
+                self.display.draw(self.life)
+                print("YOU DIED!!")
+                self.is_playing==False
+                break
+                
+            
         
-        """
-
-        letter=input("guess a letter: ")
-        Guess.input=letter
-        
-        
-        
-    def check_letter(self):
-        """here is where we have guess check to see if the inputed letter is in the word, then we tell display to add a correct letter into the correct position
-        """
-        Guess.guess_letter(Guess())
-        Guess.reveal_word(Guess())
-        
-    def do_output(self):
-        """here is where we display the parachute man, the blank word, and a correct letter, or a damaged piece of parachute.
-        """
-        Display.draw_parachute(Display())
-        Display.draw_person(Display())
     
-    
-# test1=Game_Master()
-# test1.star_game()
+            
