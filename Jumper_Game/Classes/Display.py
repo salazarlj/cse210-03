@@ -11,6 +11,10 @@ class Display:
     def __init__(self):
         self.chute = ["\t __","\t/__\\","\t\  /","\t \/"]
         self.life=4
+        
+    def draw(self):
+        Display.draw_person()
+        Display.draw_parachute()
        
     def draw_person(self):
         if self.life>0:
@@ -45,8 +49,8 @@ class Display:
                 
 
    
-test1 = Display()
+# test1 = Display()
 
-test1.draw_parachute()
+# test1.draw_parachute()
 
-test1.draw_person()
+# test1.draw_person()
