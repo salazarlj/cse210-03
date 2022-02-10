@@ -1,4 +1,7 @@
 
+from Jumper_Game.Classes.Guess import Guess
+
+
 class Display:
 
     """ This class is in charge of displaying the lines and
@@ -9,44 +12,74 @@ class Display:
     methods: """
     
     def __init__(self):
-        self.chute = ["\t __","\t/__\\","\t\  /","\t \/"]
-        self.life=4
+        self.tries = 6
+
        
-    def draw_person(self):
-        if self.life>0:
-            print( "\t O")
-        else:
-            print( "\t X")
-        print(" \t/|\\")
-        print(" \t/ \\")
-      
     def draw_parachute(self):
-        if self.life==4:
-            for j in self.chute:
-                print(j)
-        elif self.life==3:
-            for i in range(1):
-                self.chute.pop(0)
-            for i in self.chute:
-                print(i)
-        elif self.life==2:
-            for i in range(2):
-                self.chute.pop(0)
-            for i in self.chute:
-                print(i)
-        elif self.life==1:
-            for i in range(3):
-                self.chute.pop(0)
-            for i in self.chute:
-                print(i)
-        else:
-            pass
-                
-                
+        stages = [
+            """"_________
+				 |	 |
+				 |	 O
+				 |	\|/
+				 |	 |
+				 |	/ \ 
+				 |________""",
 
-   
-test1 = Display()
+                 """
+                 _________
+				 |	 |
+				 |	 O
+				 |	\|/
+				 |	 |
+				 |
+				 |________
+                 """,
 
-test1.draw_parachute()
+                 """"
+                 _________
+				 |	 |
+				 |	 O
+				 |	\|
+				 |	 |
+				 |
+				 |________""",
 
-test1.draw_person()
+                 """"
+                 ________
+				 |	 |
+				 |	 O
+				 |	 |
+				 |	 |
+				 |
+				 |________""",
+                 """
+                  _________
+				 |	 |
+				 |	 O
+				 |
+				 |
+				 |
+				 |________
+                 """,
+                """
+				 _________
+				 |	 |
+				 |
+				 |
+				 |
+				 |
+				 |________
+				"""
+        ]
+        return stages[self.tries]
+				 
+		 
+				 
+		 
+			
+		 
+		 
+				 
+				 
+        
+            
