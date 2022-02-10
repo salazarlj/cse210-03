@@ -1,6 +1,6 @@
-from Guess import Guess
-from Puzzle import Puzzle
-from Display import Display
+from Classes.Guess import Guess
+from Classes.Puzzle import Puzzle
+from Classes.Display import Display
 
 
 

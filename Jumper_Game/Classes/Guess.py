@@ -1,4 +1,5 @@
 from Classes.Puzzle import Puzzle
+
 class Guess:
 
     """This class is in charge of the player´s guessing letter part
