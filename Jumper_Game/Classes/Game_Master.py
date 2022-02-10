@@ -18,6 +18,7 @@ class Game_Master:
         self.guess=Guess()
         self.puzzle=Puzzle()
         self.display=Display()
+        self.user_input = ""
         secret_word=""
         
         pass
@@ -32,12 +33,18 @@ class Game_Master:
         """here is where we ask for a letter.
         
         """
-        
+        self.user_input = input("Guess a letter [a-z]: ")
+        return
         
     def check_letter(self):
         """here is where we have guess check to see if the inputed letter is in the word, then we tell display to add a correct letter into the correct position
         """
+        if self.guess == True:
+
+            return
         
     def do_output(self):
         """here is where we display the parachute man, the blank word, and a correct letter, or a damaged piece of parachute.
         """
+        if self.display == True:
+            return
