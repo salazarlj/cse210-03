@@ -13,6 +13,16 @@ class Guess:
     """
 
     def __init__(self):
+# <<<<<<< victor-daniel-gauna
+# =======
+#         secret_word=Puzzle.get_random_word(Puzzle())
+#         print(secret_word)
+    
+#     def guess_letter():
+#         pass
+#     def reveal_word():
+#         pass
+# >>>>>>> main
 
         #choose a random word
         secret_word = Puzzle.get_random_word(Puzzle())
@@ -39,11 +49,15 @@ class Guess:
                 else:
                     return False  
 
-    def reveal_word(self):
-        #call the letter if this exist in the list or draw a dashes if there isn't
-        reveal_letter = self.guess_letter()
-        if reveal_letter:
-            print(reveal_letter)
-        else:
-            print("_")
+# <<<<<<< victor-daniel-gauna
+#     def reveal_word(self):
+#         #call the letter if this exist in the list or draw a dashes if there isn't
+#         reveal_letter = self.guess_letter()
+#         if reveal_letter:
+#             print(reveal_letter)
+#         else:
+#             print("_")
         
+# =======
+# guess=Guess()
+# >>>>>>> main
