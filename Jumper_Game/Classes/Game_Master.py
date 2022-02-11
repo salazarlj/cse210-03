@@ -53,13 +53,13 @@ class Game_Master:
             if self.word_letters==self.secret_letters:
                 print("Congrats! You Won!")
                 self.is_playing==False
-                break
+           
             
             if self.life<1:
                 self.display.draw(self.life)
                 print("YOU DIED!!")
                 self.is_playing==False
-                break
+         
             
             elif self.life <1 or self.word_letters == self.secret_letters:
                 still_playing = input("Do you want to play again? yes/no: ")
