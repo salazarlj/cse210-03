@@ -23,6 +23,7 @@ class Game_Master:
         self.secret_letters=[]
         self.life=self.guess.life
         self.word=self.puzzle.word
+        self.still_playing = ""
         
 
 
@@ -52,22 +53,26 @@ class Game_Master:
             
             if self.word_letters==self.secret_letters:
                 print("Congrats! You Won!")
-                self.is_playing==False
+                still_playing = input("Do you want to play again? y/n: ")
+                if still_playing.lower() == "y":
+                    self.is_playing==True
+                elif still_playing.lower() == "n":
+                    self.is_playing==False
            
             
             if self.life<1:
                 self.display.draw(self.life)
                 print("YOU DIED!!")
                 self.is_playing==False
+                still_playing = input("Do you want to play again? y/n: ")
+                if still_playing.lower() == "y":
+                    self.is_playing==True
+                elif still_playing.lower() == "n":
+                    self.is_playing==False
          
             
-            elif self.life <1 or self.word_letters == self.secret_letters:
-                still_playing = input("Do you want to play again? yes/no: ")
-                if still_playing.lower() == "yes":
-                    self.is_playing==True
-                else:
-                    self.is_playing==False
-                break
+    
+    
             
             
         
