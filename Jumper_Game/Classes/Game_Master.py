@@ -60,7 +60,15 @@ class Game_Master:
                 print("YOU DIED!!")
                 self.is_playing==False
                 break
-                
+            
+            elif self.life <1 or self.word_letters == self.secret_letters:
+                still_playing = input("Do you want to play again? yes/no: ")
+                if still_playing.lower() == "yes":
+                    self.is_playing==True
+                else:
+                    self.is_playing==False
+                break
+            
             
         
     
