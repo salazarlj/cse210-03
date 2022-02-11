@@ -1,3 +1,4 @@
+from bdb import Breakpoint
 from Classes.Guess import Guess
 from Classes.Puzzle import Puzzle
 from Classes.Display import Display
@@ -23,7 +24,6 @@ class Game_Master:
         self.secret_letters=[]
         self.life=self.guess.life
         self.word=self.puzzle.word
-        self.still_playing = ""
         
 
 
@@ -58,6 +58,7 @@ class Game_Master:
                     self.is_playing==True
                 elif still_playing.lower() == "n":
                     self.is_playing==False
+                    break
            
             
             if self.life<1:
@@ -69,6 +70,7 @@ class Game_Master:
                     self.is_playing==True
                 elif still_playing.lower() == "n":
                     self.is_playing==False
+                    break
          
             
     
