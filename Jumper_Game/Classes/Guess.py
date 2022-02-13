@@ -17,10 +17,6 @@ class Guess:
         self.display=Display()
         self.life=4
 
-
-
-
-
     def set_word_letters(self,list):
         self.word_letters=list
         

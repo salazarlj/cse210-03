@@ -23,9 +23,7 @@ class Game_Master:
         self.secret_letters=[]
         self.life=self.guess.life
         self.word=self.puzzle.word
-        
-
-
+    
     def start_game(self,):
         self.word=self.puzzle.get_random_word()
         self.guess.set_word_letters(self.word_letters)
@@ -34,8 +32,7 @@ class Game_Master:
 
         for i in range(len(self.puzzle.word_letters)):
           self.secret_letters.append('_')
-       
-        
+     
         while self.is_playing:
             
             print("  ".join(self.secret_letters))
@@ -44,6 +41,7 @@ class Game_Master:
             self.display.draw(self.life)
             print()
             
+            # cat = Puzzle.category_list.
             self.input=input("guess a letter: ") 
             if self.guess.guess_letter(self.input)== False:
                 self.life-=1
