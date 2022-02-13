@@ -11,8 +11,6 @@ class Display:
     def __init__(self):
         self.chute = ["\t __","\t/__\\","\t\  /","\t \/"]
         self.life=0
-
-
     
     def set_life(self,life):
         self.life=life
